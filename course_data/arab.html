@@ -1,0 +1,413 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Teaching Timetable
+</title><link href="../App_Themes/RWSTheme/style01.css" type="text/css" rel="stylesheet" /></head>
+<body>
+    <form method="post" action="./tt_dsp_timetable.aspx" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'btn_search')" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwNjM1NzYxNDcPZBYCAgMPZBYEAgEPDxYCHgRUZXh0ZWRkAgMPZBYIZg9kFgwCAQ8QDxYGHg5EYXRhVmFsdWVGaWVsZAULQUNBRF9DQVJFRVIeDURhdGFUZXh0RmllbGQFBURFU0NSHgtfIURhdGFCb3VuZGdkEBUEE1Bvc3RncmFkdWF0ZSAtIFBHREUXUG9zdGdyYWR1YXRlIC0gUmVzZWFyY2gVUG9zdGdyYWR1YXRlIC0gVGF1Z2h0DVVuZGVyZ3JhZHVhdGUVBARQR0RFA1JQRwNUUEcCVUcUKwMEZ2dnZxYBAgNkAgMPEA8WBh8BBQRTVFJNHwIFBURFU0NSHwNnZBAVBBwyMDI0LTI1IEFjYWQgWWVhciAoTWVkaWNpbmUpDjIwMjQtMjUgVGVybSAxDjIwMjQtMjUgVGVybSAyFjIwMjQtMjUgU3VtbWVyIFNlc3Npb24VBAQyMzM1BDIzNDAEMjM1MAQyMzcwFCsDBGdnZ2dkZAIFDxAPFgYfAQUHU1VCSkVDVB8CBQVERVNDUh8DZ2QQFX8AEkFDQ1QgLSBBY2NvdW50YW5jeRlBSVNUIC0gQUk6IFN5c3RlbXMgJiBUZWNoE0FOVEggLSBBbnRocm9wb2xvZ3kNQVJBQiAtIEFyYWJpYxxBUkNIIC0gQXJjaGl0ZWN0dXJhbCBTdHVkaWVzIkFSVFMgLSBDb3Vyc2VzIG9mZmVyZWQgYnkgQXJ0cyBGYWMTQkNIRSAtIEJpb2NoZW1pc3RyeSVCQ0pDIC0gSm9pbnRseSBvZmZlcmVkLURwdCBvZiBDSEkvQkNNF0JDTUUgLSBDaGluZXNlIE1lZGljaW5lIEJFQ0UgLSBFYXJseSBDaGlsZGhvb2QgRWR1Y2F0aW9uDkJJT0wgLSBCaW9sb2d5IEJNQkwgLSBCaW1vZGFsIEJpbGluZ3VhbCBTdHVkaWVzHkJNRUQgLSBNYXRocyAmIE1hdGhzIEVkdWNhdGlvbh1CTUVHIC0gQmlvbWVkaWNhbCBFbmdpbmVlcmluZyFDQ1NTIC0gQ29udGVtcG9yYXJ5IENoaW5hIFN0dWRpZXMhQ0RBUyAtIENvbXB1dGF0aW9uYWwgRGF0YSBTY2llbmNlG0NFTkcgLSBDb21wdXRlciBFbmdpbmVlcmluZyBDSEVEIC0gRWFybHkgQ2hpbGRob29kIEVkdWNhdGlvbhBDSEVNIC0gQ2hlbWlzdHJ5FkNIRVMgLSBDaGluZXNlIFN0dWRpZXMkQ0hMTCAtIENoaW5lc2UgTGFuZ3VhZ2UgJiBMaXRlcmF0dXJlIkNITFQgLSBDaGluZXNlIFByb2ZpY2llbmN5IENvdXJzZXMgQ0hQUiAtIENvbW11bml0eSBIZWFsdGggUHJhY3RpY2UQQ0xDQyAtIENhbnRvbmVzZRpDTENFIC0gQ0xDIGNvbnRlbnQgY291cnNlcw5DTENIIC0gSG9ra2llbhBDTENQIC0gUHV0b25naHVhIUNMRUQgLSBDaGluZXNlIExhbmd1YWdlIEVkdWNhdGlvbh9DTUJJIC0gQ2VsbCAmIE1vbGVjdWxhciBCaW9sb2d5FENPTU0gLSBDb21tdW5pY2F0aW9uHUNPT1AgLSBDby1vcGVyYXRpdmUgRWR1Y2F0aW9uF0NTQ0kgLSBDb21wdXRlciBTY2llbmNlGkNVTVQgLSBDdWx0dXJhbCBNYW5hZ2VtZW50I0NVUkUgLSBDdWx0dXJhbCAmIFJlbGlnaW91cyBTdHVkaWVzIURPVEUgLSBEZXB0IG9mIERlY2lzLCBPcGVyICYgVGVjaCVEU01FIC0gRGVjaXNpb24gU2NpZW5jZXMgJiBNYW5hZ2VyaWFsJERTUFMgLSBEYXRhIFNjaWVuY2UgJiBQb2xpY3kgU3R1ZGllcxBFQ09OIC0gRWNvbm9taWNzEEVEVUMgLSBFZHVjYXRpb24jRUVFTiAtIEVuZXJneSBhbmQgRW52aXJvbm1lbnRhbCBFcmcjRUVTQyAtIEVhcnRoICYgRW52aXJvbm1lbnRhbCBTY2ktVUchRUxFRCAtIEVuZ2xpc2ggTGFuZ3VhZ2UgRWR1Y2F0aW9uHUVMRUcgLSBFbGVjdHJvbmljIEVuZ2luZWVyaW5nJUVMVFUgLSBFbmdsaXNoIExhbmd1YWdlIFRlYWNoaW5nIFVuaXQORU5HRSAtIEVuZ2xpc2gkRU5HRyAtIENvdXJzZXMgb2ZmZXJlZCBieSBGYWMgb2YgRXJnHEVOU0MgLSBFbnZpcm9ubWVudGFsIFNjaWVuY2UkRVBJTiAtIEVudHJlcHJlbmV1cnNoaXAgJiBJbm5vdmF0aW9uJEVTU0MgLSBFYXJ0aCBTeXN0ZW0gU2NpZW5jZS1VRyBNYWpvch9FU1RSIC0gQ291cnNlcyBmb3IgRUxJVEUgU3RyZWFtEEZBQVMgLSBGaW5lIEFydHMORklOQSAtIEZpbmFuY2UiRk5TQyAtIEZvb2QgJiBOdXRyaXRpb25hbCBTY2llbmNlcw1GUkVOIC0gRnJlbmNoG0ZURUMgLSBGaW5hbmNpYWwgVGVjaG5vbG9neRVHRFJTIC0gR2VuZGVyIFN0dWRpZXMdR0VDQyAtIEdFIC0gQ2h1bmcgQ2hpIENvbGxlZ2UaR0VDVyAtIEdFIC0gQ1cgQ2h1IENvbGxlZ2UaR0VKQyAtIEdFIC0gSm9pbnQgQ29sbGVnZXMfR0VNQyAtIEdFIC0gTW9ybmluZ3NpZGUgQ29sbGVnZRxHRU5BIC0gR0UgLSBOZXcgQXNpYSBDb2xsZWdlDUdFUk0gLSBHZXJtYW4YR0VTQyAtIEdFIC0gU2hhdyBDb2xsZWdlG0dFU0ggLSBHRSAtIFMuSC4gSG8gQ29sbGVnZRpHRVVDIC0gR0UgLSBVbml0ZWQgQ29sbGVnZSBHRVdTIC0gR0UgLSBMZWUgV29vIFNpbmcgQ29sbGVnZR5HRVlTIC0gR0UgLSBXdSBZZWUgU3VuIENvbGxlZ2UjR0xFRiAtIEdsb2JhbCBFY29ub21pY3MgYW5kIEZpbmFuY2UVR0xTRCAtIEdsb2JhbCBTdHVkaWVzIEdQQUQgLSBHb3Zlcm5tZW50ICYgUHVibGljIEFkbWluJUdQU1UgLSBHbG9iYWwgUGh5c2ljaWFuLUxlYWRlcnNoaXAgU3QfR1JNRCAtIEdlb2dyYXBoeSAmIFJlc291cmNlIE1ndBJHUk9OIC0gR2Vyb250b2xvZ3kOSElTVCAtIEhpc3RvcnkeSEtTTCAtIEhvbmcgS29uZyBTaWduIExhbmd1YWdlI0hUTUcgLSBIb3RlbCBBbmQgVG91cmlzbSBNYW5hZ2VtZW50IklBU1AgLSBJbnRlcm5hdGlvbmFsIEFzaWFuIFN0dWRpZXMfSUJCQSAtIEludGVncmF0ZWQgQkJBIFByb2dyYW1tZR5JRVJHIC0gSW5mb3JtYXRpb24gRW5naW5lZXJpbmcOSVRBTCAtIEl0YWxpYW4XSkFTUCAtIEphcGFuZXNlIFN0dWRpZXMNS09SRSAtIEtvcmVhbgpMQVdTIC0gTGF3JUxEVEUgLSBMZWFybmluZyBEZXNpZ24gYW5kIFRlY2hub2xvZ3kSTElORyAtIExpbmd1aXN0aWNzHExTQ0kgLSBMaWZlIFNjaWVuY2VzIENvdXJzZXMjTUFFRyAtIE1lY2hhbmljYWwgJiBBdXRvbWF0aW9uIEVuZ2cSTUFUSCAtIE1hdGhlbWF0aWNzHk1CVEUgLSBNb2xlY3VsYXIgQmlvdGVjaG5vbG9neR9NRURGIC0gTWVkaWNpbmUgRmFjdWx0eSBQYWNrYWdlD01FRFUgLSBNZWRpY2luZRFNR05UIC0gTWFuYWdlbWVudAtNSUVHIC0gTUlFRxBNS1RHIC0gTWFya2V0aW5nDE1VU0MgLSBNdXNpYxdOU0NJIC0gTmF0dXJhbCBTY2llbmNlcw5OVVJTIC0gTnVyc2luZw9QSEFSIC0gUGhhcm1hY3kZUEhFRCAtIFBoeXNpY2FsIEVkdWNhdGlvbhFQSElMIC0gUGhpbG9zb3BoeRRQSFBDIC0gUHVibGljIEhlYWx0aA5QSFlTIC0gUGh5c2ljcxFQU1lDIC0gUHN5Y2hvbG9neR5STVNDIC0gUmlzayBNYW5hZ2VtZW50IFNjaWVuY2UOUlVTUyAtIFJ1c3NpYW4aU0JNUyAtIEJpb21lZGljYWwgU2NpZW5jZXMlU0VFTSAtIFN5c3RlbXMgRW5naW5lZXJpbmcgJiBFbmdnIE1ndBBTT0NJIC0gU29jaW9sb2d5JVNPU0MgLSBDb3Vyc2VzIG9mZmVyZWQgYnkgU1NjIEZhY3VsdHkSU09XSyAtIFNvY2lhbCBXb3JrDlNQQU4gLSBTcGFuaXNoJVNQRUQgLSBTcG9ydHMgU2NpZW5jZSAmIFBoeXNpY2FsIEVkdWMdU1NNVSAtIFNlbGVjdGVkIFN0dWR5IE1vZHVsZXMeU1RBUiAtIENvdXJzZXMgZm9yIFNUQVIgU3RyZWFtEVNUQVQgLSBTdGF0aXN0aWNzC1RIQUkgLSBUaGFpD1RIRU8gLSBUaGVvbG9neRJUUkFOIC0gVHJhbnNsYXRpb24WVUdDUCAtIENoaW5hIFByb2dyYW1tZSBVR0VBIC0gQ2hpbmVzZSBDdWx0dXJhbCBIZXJpdGFnZSVVR0VCIC0gTmF0dXJlLCBTY2llbmNlIGFuZCBUZWNobm9sb2d5GlVHRUMgLSBTb2NpZXR5IGFuZCBDdWx0dXJlGFVHRUQgLSBTZWxmIGFuZCBIdW1hbml0eSBVR0ZIIC0gSW4gRGlhbG9ndWUgd2l0aCBIdW1hbml0eR5VR0ZOIC0gSW4gRGlhbG9ndWUgd2l0aCBOYXR1cmUUVVJTUCAtIFVyYmFuIFN0dWRpZXMVfwAEQUNDVARBSVNUBEFOVEgEQVJBQgRBUkNIBEFSVFMEQkNIRQRCQ0pDBEJDTUUEQkVDRQRCSU9MBEJNQkwEQk1FRARCTUVHBENDU1MEQ0RBUwRDRU5HBENIRUQEQ0hFTQRDSEVTBENITEwEQ0hMVARDSFBSBENMQ0MEQ0xDRQRDTENIBENMQ1AEQ0xFRARDTUJJBENPTU0EQ09PUARDU0NJBENVTVQEQ1VSRQRET1RFBERTTUUERFNQUwRFQ09OBEVEVUMERUVFTgRFRVNDBEVMRUQERUxFRwRFTFRVBEVOR0UERU5HRwRFTlNDBEVQSU4ERVNTQwRFU1RSBEZBQVMERklOQQRGTlNDBEZSRU4ERlRFQwRHRFJTBEdFQ0MER0VDVwRHRUpDBEdFTUMER0VOQQRHRVJNBEdFU0MER0VTSARHRVVDBEdFV1MER0VZUwRHTEVGBEdMU0QER1BBRARHUFNVBEdSTUQER1JPTgRISVNUBEhLU0wESFRNRwRJQVNQBElCQkEESUVSRwRJVEFMBEpBU1AES09SRQRMQVdTBExEVEUETElORwRMU0NJBE1BRUcETUFUSARNQlRFBE1FREYETUVEVQRNR05UBE1JRUcETUtURwRNVVNDBE5TQ0kETlVSUwRQSEFSBFBIRUQEUEhJTARQSFBDBFBIWVMEUFNZQwRSTVNDBFJVU1MEU0JNUwRTRUVNBFNPQ0kEU09TQwRTT1dLBFNQQU4EU1BFRARTU01VBFNUQVIEU1RBVARUSEFJBFRIRU8EVFJBTgRVR0NQBFVHRUEEVUdFQgRVR0VDBFVHRUQEVUdGSARVR0ZOBFVSU1AUKwN/Z2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkAgcPEA8WBh8BBQhBQ0FEX09SRx8CBQVERVNDUh8DZ2QQFWIAGEFGTyAtIEZhYyBPZmZpY2Ugb2YgQXJ0cxpBTlQgLSBEZXB0IG9mIEFudGhyb3BvbG9neRlBUkMgLSBTY2ggb2YgQXJjaGl0ZWN0dXJlH0JCQVBDIC0gSW50ZWdyYXRlZCBCQkEgUGdtIENvbW0dQkNIUEMgLSBCaW9jaGVtaXN0cnkgUGdtIENvbW0YQkNKQyAtIERlcHQgb2YgQ0hJICYgQkNNGEJFQ1BDIC0gQkEoRUNFKSBQZ20gQ29tbRhCSU9QQyAtIEJpb2xvZ3kgUGdtIENvbW0kQk1FIC0gRGVwdCBvZiBCaW9tZWRpY2FsIEVuZ2luZWVyaW5nIkJNRURQIC0gTWF0aHMgJiBNYXRocyBFZHVjYXRpb24gUEMWQ0MgLSBDaHVuZyBDaGkgQ29sbGVnZR9DQ1NUIC0gQ2VudHJlIGZvciBDaGluYSBTdHVkaWVzJUNEQVNQIC0gQ29tcHV0YXRpb25hbCBEYXRhIFNjaWVuY2UgUEMkQ0hFUyAtIENvbnRlbXBvcmFyeSBDaGluYSBTdHVkaWVzIFBDJENISSAtIERlcHQgb2YgQ2hpbiBMYW5nICYgTGl0ZXJhdHVyZRdDSE0gLSBEZXB0IG9mIENoZW1pc3RyeR5DTEMgLSBZYWxlLUNoaW5hIENoaW4gTGFuZyBDdHIjQ01CIC0gQ2VsbCBhbmQgTW9sZWN1bGFyIEJpb2xvZ3kgUEMdQ01QIC0gU2NoIG9mIENoaW5lc2UgTWVkaWNpbmUgQ09NIC0gU2NoIG9mIEpvdXJuYWxpc20gYW5kIENvbW0jQ1JJIC0gRGVwdCBvZiBDdXJyaWN1bHVtICYgSW5zdHJ1Y3QkQ1JTIC0gRGVwdCBvZiBDdWx0dXJhbCAmIFJlbCBTdHVkaWVzIUNTRCAtIERlcHQgb2YgQ29tcHV0ZXIgU2NpICYgRW5nZyRDVU1QQyAtIEN1bHR1cmFsIE1hbmFnZW1lbnQgUGdtIENvbW0TQ1cgLSBDVyBDaHUgQ29sbGVnZSFEU01FIC0gRGVwdCBvZiBEZWNpcywgT3BlciAmIFRlY2glRFNQU1AgLSBEYXRhIFNjaWVuY2UgJiBQb2xpY3kgU3R1ZCBQQyBFQVAgLSBEZXB0IG9mIEVkdSBBZG1pbiAmIFBvbGljeRdFQ08gLSBEZXB0IG9mIEVjb25vbWljcx1FRENQQyAtIENoaSBMYW4gRWR1IFByb2cgQ29tbR9FRFVGTyAtIEZhYyBPZmZpY2Ugb2YgRWR1Y2F0aW9uJkVFRFBDIC0gRW5nbGlzaCBTdHVkICYgRW5nIExhbmcgRWR1IFBDI0VFU1UgLSBFYXJ0aCAmIEVudmlyb25tZW50YWwgU2NpIFBDJEVMRSAtIERlcHQgb2YgRWxlY3Ryb25pYyBFbmdpbmVlcmluZyRFTFQgLSBFbmdsaXNoIExhbmd1YWdlIFRlYWNoaW5nIFVuaXQVRU5HIC0gRGVwdCBvZiBFbmdsaXNoH0VOTyAtIEZhYyBPZmZpY2Ugb2YgRW5naW5lZXJpbmcjRU5UIC0gRGVwdCBvZiBPdG9yLCBIZWFkICYgTmVjayBTdXIkRVNQIC0gRW52aXJvbm1lbnRhbCBTY2llbmNlIFBnbSBDb21tJEVTU1UgLSBFYXJ0aCBTeXN0ZW0gU2NpZW5jZSBQZ20gQ29tbRdGQUEgLSBEZXB0IG9mIEZpbmUgQXJ0cxVGSU4gLSBEZXB0IG9mIEZpbmFuY2UfRlNQIC0gRm9vZCAmIE51dHJpdGlvbmFsIFNjaSBQQyVHRUZQQyAtIEdsb2JhbCBFY29ub21pY3MgJiBGaW5hbmNlIFBDIUdFSkMgLSBKb2ludCBDb2xsZWdlcyBHZW5lcmFsIEVkdSBHRU8gLSBEZXB0IG9mIEdlbyAmIFJlc291cmNlIE1ndCNHUEEgLSBEZXB0IG9mIEdvdmVybiAmIFB1YmxpYyBBZG1pbh9HU0ZQQyAtIEdsb2JhbCBTdHVkaWVzIFBnbSBDb21tHUdTUCAtIEdlbmRlciBTdHVkaWVzIFBnbSBDb21tHUdTUEMgLSBHbG9iYWwgU3R1ZGllcyBQQyAyLXlyFUhJUyAtIERlcHQgb2YgSGlzdG9yeSFIVE1HIC0gU2NoIG9mIEhvdGVsICYgVG91cmlzbSBNZ3QlSUFTUCAtIEludGVybmF0aW9uYWwgQXNpYW4gU3R1ZGllcyBQQx5JRUcgLSBEZXB0IG9mIEluZm9ybWF0aW9uIEVuZ2ceSkFTIC0gRGVwdCBvZiBKYXBhbmVzZSBTdHVkaWVzFExBV1BDIC0gTExCIFBnbSBDb21tIUxEVFBDIC0gTGVhcm5pbmcgRGVzaWduICYgVGVjaCBQQyRMSU4gLSBEZXB0IG9mIExpbmd1aXN0aWNzICYgTW9kIExhbmclTUFFRyAtIERlcHQgb2YgTWVjaCAmIEF1dG9tYXRpb24gRW5nZxdNQkNIQiAtIE1CIENoQiBQZ20gQ29tbRhNQyAtIE1vcm5pbmdzaWRlIENvbGxlZ2UiTUZPUkUgLSBGYWN1bHR5IE9mZmljZSBvZiBNZWRpY2luZRlNR05UIC0gRGVwdCBvZiBNYW5hZ2VtZW50F01LVCAtIERlcHQgb2YgTWFya2V0aW5nE01VUyAtIERlcHQgb2YgTXVzaWMVTkEgLSBOZXcgQXNpYSBDb2xsZWdlHE5TUEMgLSBOYXR1cmFsIFNjaSBQcm9nIENvbW0iTlVSIC0gTmV0aGVyc29sZSBTY2hvb2wgb2YgTnVyc2luZx9PQ0VQIC0gQ28tb3AgRWR1Y2F0aW9uIFBnbSBDb21tHU9HRSAtIE9mZmljZSBvZiBVbml2ZXJzaXR5IEdFHVBFVSAtIFBoeXNpY2FsIEVkdWNhdGlvbiBVbml0IVBIRSAtIERlcHQgb2YgU3BvcnRzIFNjICYgUGh5IEVkdRhQSEkgLSBEZXB0IG9mIFBoaWxvc29waHkXUEhNQ1kgLSBTY2ggb2YgUGhhcm1hY3kVUEhZIC0gRGVwdCBvZiBQaHlzaWNzGVBNQSAtIERlcHQgb2YgTWF0aGVtYXRpY3MYUFNZIC0gRGVwdCBvZiBQc3ljaG9sb2d5IVJNU1AgLSBSaXNrIE1hbmFnZW1lbnQgU2NpZW5jZSBQQxlTQUNZIC0gU2NoIG9mIEFjY291bnRhbmN5IFNCUyAtIFNjaCBvZiBCaW9tZWRpY2FsIFNjaWVuY2VzElNDQSAtIFNoYXcgQ29sbGVnZRtTRk8gLSBGYWMgT2ZmaWNlIG9mIFNjaWVuY2UUU0ggLSBTLkguIEhvIENvbGxlZ2UdU0xTIC0gU2Nob29sIG9mIExpZmUgU2NpZW5jZXMXU09DIC0gRGVwdCBvZiBTb2Npb2xvZ3kmU1BIUEMgLSBKQyBTY2ggb2YgUHViIEhlYWx0aCBQcmltIENhcmUhU1BNQiAtIE1vbGVjdWxhciBCaW90ZWNobm9sb2d5IFBDIlNTTyAtIEZhYyBPZmZpY2Ugb2YgU29jaWFsIFNjaWVuY2UYU1RBIC0gRGVwdCBvZiBTdGF0aXN0aWNzGVNXSyAtIERlcHQgb2YgU29jaWFsIFdvcmsjU1lFRU0gLSBEZXB0IG9mIFN5cyBFbmdnICYgRW5nZyBNZ3QYVEYgLSBFUElOIE1pbm9yIFBnbSBDb21tGVRSQSAtIERlcHQgb2YgVHJhbnNsYXRpb24TVUMgLSBVbml0ZWQgQ29sbGVnZR1VU1BDIC0gVXJiYW4gU3R1ZGllcyBQZ20gQ29tbRlXUyAtIExlZSBXb28gU2luZyBDb2xsZWdlF1lTIC0gV3UgWWVlIFN1biBDb2xsZWdlFWIAA0FGTwNBTlQDQVJDBUJCQVBDBUJDSFBDBEJDSkMFQkVDUEMFQklPUEMDQk1FBUJNRURQAkNDBENDU1QFQ0RBU1AEQ0hFUwNDSEkDQ0hNA0NMQwNDTUIDQ01QA0NPTQNDUkkDQ1JTA0NTRAVDVU1QQwJDVwREU01FBURTUFNQA0VBUANFQ08FRURDUEMFRURVRk8FRUVEUEMERUVTVQNFTEUDRUxUA0VORwNFTk8DRU5UA0VTUARFU1NVA0ZBQQNGSU4DRlNQBUdFRlBDBEdFSkMDR0VPA0dQQQVHU0ZQQwNHU1AER1NQQwNISVMESFRNRwRJQVNQA0lFRwNKQVMFTEFXUEMFTERUUEMDTElOBE1BRUcFTUJDSEICTUMFTUZPUkUETUdOVANNS1QDTVVTAk5BBE5TUEMDTlVSBE9DRVADT0dFA1BFVQNQSEUDUEhJBVBITUNZA1BIWQNQTUEDUFNZBFJNU1AEU0FDWQNTQlMDU0NBA1NGTwJTSANTTFMDU09DBVNQSFBDBFNQTUIDU1NPA1NUQQNTV0sFU1lFRU0CVEYDVFJBAlVDBFVTUEMCV1MCWVMUKwNiZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkZAIJD2QWAgIBDw8WAh4ISW1hZ2VVcmwFOUJ1aWxkQ2FwdGNoYS5hc3B4P2NhcHRjaGFuYW1lPXR0XzYzODc5MTMzODA5Njk0Njg0MiZsZW49NGRkAg0PPCsAEQMADxYEHwNnHgtf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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/rws_prd_applx2/WebResource.axd?d=gy7P5XA0GvpaaeuhF4qPsdPQ74tVCduBqmkQg_c7qOiZ4dV5tLMYMoT48QIgt13gKZ-KUpXwiRd4YdMu_V47e-m0VSC5bAIDNhsBb6qWAHM1&amp;t=638568892371266408" type="text/javascript"></script>
+
+
+<script src="/rws_prd_applx2/WebResource.axd?d=wWbmaFi-VVQS-YhkCxPz0dVwTwga35FjXdy7cI4PVALD-zeq_55yo3dRZE2WWPATemLP9vYlytnPmLzDefgxBzEgc82Vu62xKKfkeIYEiS81&amp;t=638568892371266408" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6B2B8CA6" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+</div>
+    <div>
+    <br />
+    <div class="titleNormal">Enquire Teaching Timetable</div>
+    <br /><br />
+    <span id="lbl_error" class="errorLabel"></span>
+    
+            <div class="paddingTop10pxDown10px">                
+                <table border="0" cellpadding="1" cellspacing="0">
+                    <tr>
+                        <td valign="top" class="fieldHeader">Academic Career <span style="color:#FF0000">*</span></td>
+                        <td valign="top">
+                            <select name="ddl_acad_career" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ddl_acad_career\&#39;,\&#39;\&#39;)&#39;, 0)" id="ddl_acad_career" class="normalDropDownListStyle">
+	<option value="PGDE">Postgraduate - PGDE</option>
+	<option value="RPG">Postgraduate - Research</option>
+	<option value="TPG">Postgraduate - Taught</option>
+	<option selected="selected" value="UG">Undergraduate</option>
+
+</select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" class="fieldHeader">Academic Term <span style="color:#FF0000">*</span></td>
+                        <td valign="top">
+                            <select name="ddl_acad_term" id="ddl_acad_term" class="normalDropDownListStyle">
+	<option value="2335">2024-25 Acad Year (Medicine)</option>
+	<option value="2340">2024-25 Term 1</option>
+	<option selected="selected" value="2350">2024-25 Term 2</option>
+	<option value="2370">2024-25 Summer Session</option>
+
+</select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fieldHeader" valign="top">Course Subject</td>
+                        <td valign="top">
+                            <select name="ddl_subject" id="ddl_subject" class="normalDropDownListStyle" style="width:30em;">
+	<option value=""></option>
+	<option value="ACCT">ACCT - Accountancy</option>
+	<option value="AIST">AIST - AI: Systems &amp; Tech</option>
+	<option value="ANTH">ANTH - Anthropology</option>
+	<option selected="selected" value="ARAB">ARAB - Arabic</option>
+	<option value="ARCH">ARCH - Architectural Studies</option>
+	<option value="ARTS">ARTS - Courses offered by Arts Fac</option>
+	<option value="BCHE">BCHE - Biochemistry</option>
+	<option value="BCJC">BCJC - Jointly offered-Dpt of CHI/BCM</option>
+	<option value="BCME">BCME - Chinese Medicine</option>
+	<option value="BECE">BECE - Early Childhood Education</option>
+	<option value="BIOL">BIOL - Biology</option>
+	<option value="BMBL">BMBL - Bimodal Bilingual Studies</option>
+	<option value="BMED">BMED - Maths &amp; Maths Education</option>
+	<option value="BMEG">BMEG - Biomedical Engineering</option>
+	<option value="CCSS">CCSS - Contemporary China Studies</option>
+	<option value="CDAS">CDAS - Computational Data Science</option>
+	<option value="CENG">CENG - Computer Engineering</option>
+	<option value="CHED">CHED - Early Childhood Education</option>
+	<option value="CHEM">CHEM - Chemistry</option>
+	<option value="CHES">CHES - Chinese Studies</option>
+	<option value="CHLL">CHLL - Chinese Language &amp; Literature</option>
+	<option value="CHLT">CHLT - Chinese Proficiency Courses</option>
+	<option value="CHPR">CHPR - Community Health Practice</option>
+	<option value="CLCC">CLCC - Cantonese</option>
+	<option value="CLCE">CLCE - CLC content courses</option>
+	<option value="CLCH">CLCH - Hokkien</option>
+	<option value="CLCP">CLCP - Putonghua</option>
+	<option value="CLED">CLED - Chinese Language Education</option>
+	<option value="CMBI">CMBI - Cell &amp; Molecular Biology</option>
+	<option value="COMM">COMM - Communication</option>
+	<option value="COOP">COOP - Co-operative Education</option>
+	<option value="CSCI">CSCI - Computer Science</option>
+	<option value="CUMT">CUMT - Cultural Management</option>
+	<option value="CURE">CURE - Cultural &amp; Religious Studies</option>
+	<option value="DOTE">DOTE - Dept of Decis, Oper &amp; Tech</option>
+	<option value="DSME">DSME - Decision Sciences &amp; Managerial</option>
+	<option value="DSPS">DSPS - Data Science &amp; Policy Studies</option>
+	<option value="ECON">ECON - Economics</option>
+	<option value="EDUC">EDUC - Education</option>
+	<option value="EEEN">EEEN - Energy and Environmental Erg</option>
+	<option value="EESC">EESC - Earth &amp; Environmental Sci-UG</option>
+	<option value="ELED">ELED - English Language Education</option>
+	<option value="ELEG">ELEG - Electronic Engineering</option>
+	<option value="ELTU">ELTU - English Language Teaching Unit</option>
+	<option value="ENGE">ENGE - English</option>
+	<option value="ENGG">ENGG - Courses offered by Fac of Erg</option>
+	<option value="ENSC">ENSC - Environmental Science</option>
+	<option value="EPIN">EPIN - Entrepreneurship &amp; Innovation</option>
+	<option value="ESSC">ESSC - Earth System Science-UG Major</option>
+	<option value="ESTR">ESTR - Courses for ELITE Stream</option>
+	<option value="FAAS">FAAS - Fine Arts</option>
+	<option value="FINA">FINA - Finance</option>
+	<option value="FNSC">FNSC - Food &amp; Nutritional Sciences</option>
+	<option value="FREN">FREN - French</option>
+	<option value="FTEC">FTEC - Financial Technology</option>
+	<option value="GDRS">GDRS - Gender Studies</option>
+	<option value="GECC">GECC - GE - Chung Chi College</option>
+	<option value="GECW">GECW - GE - CW Chu College</option>
+	<option value="GEJC">GEJC - GE - Joint Colleges</option>
+	<option value="GEMC">GEMC - GE - Morningside College</option>
+	<option value="GENA">GENA - GE - New Asia College</option>
+	<option value="GERM">GERM - German</option>
+	<option value="GESC">GESC - GE - Shaw College</option>
+	<option value="GESH">GESH - GE - S.H. Ho College</option>
+	<option value="GEUC">GEUC - GE - United College</option>
+	<option value="GEWS">GEWS - GE - Lee Woo Sing College</option>
+	<option value="GEYS">GEYS - GE - Wu Yee Sun College</option>
+	<option value="GLEF">GLEF - Global Economics and Finance</option>
+	<option value="GLSD">GLSD - Global Studies</option>
+	<option value="GPAD">GPAD - Government &amp; Public Admin</option>
+	<option value="GPSU">GPSU - Global Physician-Leadership St</option>
+	<option value="GRMD">GRMD - Geography &amp; Resource Mgt</option>
+	<option value="GRON">GRON - Gerontology</option>
+	<option value="HIST">HIST - History</option>
+	<option value="HKSL">HKSL - Hong Kong Sign Language</option>
+	<option value="HTMG">HTMG - Hotel And Tourism Management</option>
+	<option value="IASP">IASP - International Asian Studies</option>
+	<option value="IBBA">IBBA - Integrated BBA Programme</option>
+	<option value="IERG">IERG - Information Engineering</option>
+	<option value="ITAL">ITAL - Italian</option>
+	<option value="JASP">JASP - Japanese Studies</option>
+	<option value="KORE">KORE - Korean</option>
+	<option value="LAWS">LAWS - Law</option>
+	<option value="LDTE">LDTE - Learning Design and Technology</option>
+	<option value="LING">LING - Linguistics</option>
+	<option value="LSCI">LSCI - Life Sciences Courses</option>
+	<option value="MAEG">MAEG - Mechanical &amp; Automation Engg</option>
+	<option value="MATH">MATH - Mathematics</option>
+	<option value="MBTE">MBTE - Molecular Biotechnology</option>
+	<option value="MEDF">MEDF - Medicine Faculty Package</option>
+	<option value="MEDU">MEDU - Medicine</option>
+	<option value="MGNT">MGNT - Management</option>
+	<option value="MIEG">MIEG - MIEG</option>
+	<option value="MKTG">MKTG - Marketing</option>
+	<option value="MUSC">MUSC - Music</option>
+	<option value="NSCI">NSCI - Natural Sciences</option>
+	<option value="NURS">NURS - Nursing</option>
+	<option value="PHAR">PHAR - Pharmacy</option>
+	<option value="PHED">PHED - Physical Education</option>
+	<option value="PHIL">PHIL - Philosophy</option>
+	<option value="PHPC">PHPC - Public Health</option>
+	<option value="PHYS">PHYS - Physics</option>
+	<option value="PSYC">PSYC - Psychology</option>
+	<option value="RMSC">RMSC - Risk Management Science</option>
+	<option value="RUSS">RUSS - Russian</option>
+	<option value="SBMS">SBMS - Biomedical Sciences</option>
+	<option value="SEEM">SEEM - Systems Engineering &amp; Engg Mgt</option>
+	<option value="SOCI">SOCI - Sociology</option>
+	<option value="SOSC">SOSC - Courses offered by SSc Faculty</option>
+	<option value="SOWK">SOWK - Social Work</option>
+	<option value="SPAN">SPAN - Spanish</option>
+	<option value="SPED">SPED - Sports Science &amp; Physical Educ</option>
+	<option value="SSMU">SSMU - Selected Study Modules</option>
+	<option value="STAR">STAR - Courses for STAR Stream</option>
+	<option value="STAT">STAT - Statistics</option>
+	<option value="THAI">THAI - Thai</option>
+	<option value="THEO">THEO - Theology</option>
+	<option value="TRAN">TRAN - Translation</option>
+	<option value="UGCP">UGCP - China Programme</option>
+	<option value="UGEA">UGEA - Chinese Cultural Heritage</option>
+	<option value="UGEB">UGEB - Nature, Science and Technology</option>
+	<option value="UGEC">UGEC - Society and Culture</option>
+	<option value="UGED">UGED - Self and Humanity</option>
+	<option value="UGFH">UGFH - In Dialogue with Humanity</option>
+	<option value="UGFN">UGFN - In Dialogue with Nature</option>
+	<option value="URSP">URSP - Urban Studies</option>
+
+</select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fieldHeader" valign="top" align="left" colspan="2">Or</td>
+                    </tr>
+                    <tr>
+                        <td class="fieldHeader" valign="top">Course Offering Dept</td>
+                        <td valign="top">
+                            <select name="ddl_acad_org" id="ddl_acad_org" class="normalDropDownListStyle" style="width:30em;">
+	<option selected="selected" value=""></option>
+	<option value="AFO">AFO - Fac Office of Arts</option>
+	<option value="ANT">ANT - Dept of Anthropology</option>
+	<option value="ARC">ARC - Sch of Architecture</option>
+	<option value="BBAPC">BBAPC - Integrated BBA Pgm Comm</option>
+	<option value="BCHPC">BCHPC - Biochemistry Pgm Comm</option>
+	<option value="BCJC">BCJC - Dept of CHI &amp; BCM</option>
+	<option value="BECPC">BECPC - BA(ECE) Pgm Comm</option>
+	<option value="BIOPC">BIOPC - Biology Pgm Comm</option>
+	<option value="BME">BME - Dept of Biomedical Engineering</option>
+	<option value="BMEDP">BMEDP - Maths &amp; Maths Education PC</option>
+	<option value="CC">CC - Chung Chi College</option>
+	<option value="CCST">CCST - Centre for China Studies</option>
+	<option value="CDASP">CDASP - Computational Data Science PC</option>
+	<option value="CHES">CHES - Contemporary China Studies PC</option>
+	<option value="CHI">CHI - Dept of Chin Lang &amp; Literature</option>
+	<option value="CHM">CHM - Dept of Chemistry</option>
+	<option value="CLC">CLC - Yale-China Chin Lang Ctr</option>
+	<option value="CMB">CMB - Cell and Molecular Biology PC</option>
+	<option value="CMP">CMP - Sch of Chinese Medicine</option>
+	<option value="COM">COM - Sch of Journalism and Comm</option>
+	<option value="CRI">CRI - Dept of Curriculum &amp; Instruct</option>
+	<option value="CRS">CRS - Dept of Cultural &amp; Rel Studies</option>
+	<option value="CSD">CSD - Dept of Computer Sci &amp; Engg</option>
+	<option value="CUMPC">CUMPC - Cultural Management Pgm Comm</option>
+	<option value="CW">CW - CW Chu College</option>
+	<option value="DSME">DSME - Dept of Decis, Oper &amp; Tech</option>
+	<option value="DSPSP">DSPSP - Data Science &amp; Policy Stud PC</option>
+	<option value="EAP">EAP - Dept of Edu Admin &amp; Policy</option>
+	<option value="ECO">ECO - Dept of Economics</option>
+	<option value="EDCPC">EDCPC - Chi Lan Edu Prog Comm</option>
+	<option value="EDUFO">EDUFO - Fac Office of Education</option>
+	<option value="EEDPC">EEDPC - English Stud &amp; Eng Lang Edu PC</option>
+	<option value="EESU">EESU - Earth &amp; Environmental Sci PC</option>
+	<option value="ELE">ELE - Dept of Electronic Engineering</option>
+	<option value="ELT">ELT - English Language Teaching Unit</option>
+	<option value="ENG">ENG - Dept of English</option>
+	<option value="ENO">ENO - Fac Office of Engineering</option>
+	<option value="ENT">ENT - Dept of Otor, Head &amp; Neck Sur</option>
+	<option value="ESP">ESP - Environmental Science Pgm Comm</option>
+	<option value="ESSU">ESSU - Earth System Science Pgm Comm</option>
+	<option value="FAA">FAA - Dept of Fine Arts</option>
+	<option value="FIN">FIN - Dept of Finance</option>
+	<option value="FSP">FSP - Food &amp; Nutritional Sci PC</option>
+	<option value="GEFPC">GEFPC - Global Economics &amp; Finance PC</option>
+	<option value="GEJC">GEJC - Joint Colleges General Edu</option>
+	<option value="GEO">GEO - Dept of Geo &amp; Resource Mgt</option>
+	<option value="GPA">GPA - Dept of Govern &amp; Public Admin</option>
+	<option value="GSFPC">GSFPC - Global Studies Pgm Comm</option>
+	<option value="GSP">GSP - Gender Studies Pgm Comm</option>
+	<option value="GSPC">GSPC - Global Studies PC 2-yr</option>
+	<option value="HIS">HIS - Dept of History</option>
+	<option value="HTMG">HTMG - Sch of Hotel &amp; Tourism Mgt</option>
+	<option value="IASP">IASP - International Asian Studies PC</option>
+	<option value="IEG">IEG - Dept of Information Engg</option>
+	<option value="JAS">JAS - Dept of Japanese Studies</option>
+	<option value="LAWPC">LAWPC - LLB Pgm Comm</option>
+	<option value="LDTPC">LDTPC - Learning Design &amp; Tech PC</option>
+	<option value="LIN">LIN - Dept of Linguistics &amp; Mod Lang</option>
+	<option value="MAEG">MAEG - Dept of Mech &amp; Automation Engg</option>
+	<option value="MBCHB">MBCHB - MB ChB Pgm Comm</option>
+	<option value="MC">MC - Morningside College</option>
+	<option value="MFORE">MFORE - Faculty Office of Medicine</option>
+	<option value="MGNT">MGNT - Dept of Management</option>
+	<option value="MKT">MKT - Dept of Marketing</option>
+	<option value="MUS">MUS - Dept of Music</option>
+	<option value="NA">NA - New Asia College</option>
+	<option value="NSPC">NSPC - Natural Sci Prog Comm</option>
+	<option value="NUR">NUR - Nethersole School of Nursing</option>
+	<option value="OCEP">OCEP - Co-op Education Pgm Comm</option>
+	<option value="OGE">OGE - Office of University GE</option>
+	<option value="PEU">PEU - Physical Education Unit</option>
+	<option value="PHE">PHE - Dept of Sports Sc &amp; Phy Edu</option>
+	<option value="PHI">PHI - Dept of Philosophy</option>
+	<option value="PHMCY">PHMCY - Sch of Pharmacy</option>
+	<option value="PHY">PHY - Dept of Physics</option>
+	<option value="PMA">PMA - Dept of Mathematics</option>
+	<option value="PSY">PSY - Dept of Psychology</option>
+	<option value="RMSP">RMSP - Risk Management Science PC</option>
+	<option value="SACY">SACY - Sch of Accountancy</option>
+	<option value="SBS">SBS - Sch of Biomedical Sciences</option>
+	<option value="SCA">SCA - Shaw College</option>
+	<option value="SFO">SFO - Fac Office of Science</option>
+	<option value="SH">SH - S.H. Ho College</option>
+	<option value="SLS">SLS - School of Life Sciences</option>
+	<option value="SOC">SOC - Dept of Sociology</option>
+	<option value="SPHPC">SPHPC - JC Sch of Pub Health Prim Care</option>
+	<option value="SPMB">SPMB - Molecular Biotechnology PC</option>
+	<option value="SSO">SSO - Fac Office of Social Science</option>
+	<option value="STA">STA - Dept of Statistics</option>
+	<option value="SWK">SWK - Dept of Social Work</option>
+	<option value="SYEEM">SYEEM - Dept of Sys Engg &amp; Engg Mgt</option>
+	<option value="TF">TF - EPIN Minor Pgm Comm</option>
+	<option value="TRA">TRA - Dept of Translation</option>
+	<option value="UC">UC - United College</option>
+	<option value="USPC">USPC - Urban Studies Pgm Comm</option>
+	<option value="WS">WS - Lee Woo Sing College</option>
+	<option value="YS">YS - Wu Yee Sun College</option>
+
+</select>
+                        </td>
+                    </tr>
+                    <div id="panel_v_code">
+	
+                    <tr>
+                        <td></td>
+                        <td >
+                            <table>
+                                <tr>
+                                    <td style="height: 50px; width:100px;">
+                                        <img id="imgCaptcha" src="BuildCaptcha.aspx?captchaname=tt_638791338096946842&amp;len=4" />
+                                    </td>
+                                    <td valign="bottom">
+                                        <input type="submit" name="btn_refresh" value="Refresh" id="btn_refresh" class="normalButton" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- <tr>
+                        <td class="fieldHeader" valign="top">&nbsp;</td>
+                        <td>
+                            
+                        </td>
+                    </tr>-->
+                    <tr>
+                        <td class="fieldHeader" valign="top">Verification Code</td>
+                        <td>
+                            <input name="txt_captcha" type="text" value="2U9N" id="txt_captcha" style="width:200px;" />
+                        </td>
+                    </tr>
+                    
+</div>
+                    <tr>
+                        <td class="fieldHeader" valign="top">&nbsp;</td>
+                        <td valign="top">
+                            <input type="submit" name="btn_search" value="Search" id="btn_search" class="normalButton" style="width:10em;" />
+                        </td>
+                    </tr>
+                </table>
+                <br />
+            </div>    
+            <div class="paddingTop10pxDown10px">
+                <div>
+	<table cellspacing="0" cellpadding="3" rules="cols" id="gv_detail" style="color:Black;background-color:White;border-color:#EFE6F7;border-width:1px;border-style:Solid;font-size:9pt;border-collapse:collapse;">
+		<tr class="normalGridViewHeaderStyle">
+			<th scope="col">Class Code</th><th scope="col">Class Nbr</th><th scope="col">Course Title</th><th scope="col">Units</th><th scope="col">Teaching Staff</th><th scope="col">Quota(s)</th><th scope="col">Vacancy</th><th scope="col">Course Component</th><th scope="col">Section Code</th><th scope="col">Language</th><th scope="col" style="width:250px;">Period</th><th scope="col">Room</th><th scope="col" style="width:250px;">Meeting Date</th><th scope="col">Add Consent</th><th scope="col">Drop Consent</th><th scope="col" style="width:400px;">Course Offering Dept</th>
+		</tr><tr class="normalGridViewRowStyle" valign="top">
+			<td>ARAB1000-</td><td>
+                                <a id="gv_detail_lbtn_class_nbr_0" href="javascript:__doPostBack(&#39;gv_detail$ctl02$lbtn_class_nbr&#39;,&#39;&#39;)">6398</a>
+                            </td><td style="width:500px;">
+                                <a id="gv_detail_lbtn_course_title_0" href="javascript:__doPostBack(&#39;gv_detail$ctl02$lbtn_course_title&#39;,&#39;&#39;)">Arabic I 阿拉伯語（一）</a>
+                            </td><td>3.00</td><td style="width:500px;">
+                                <span id="gv_detail_lbl_teaching_staff_0">- Mr. Amgad Refai Mohamed REFAI</span>
+                            </td><td>24</td><td>16</td><td>CLW</td><td>-C01</td><td>A&amp;E</td><td>We 09:30AM - 12:15PM</td><td>UCA_312</td><td>8/1, 15/1, 22/1</td><td>&nbsp;</td><td>&nbsp;</td><td>Dept of Linguistics &amp; Mod Lang</td>
+		</tr><tr class="normalGridViewAlternatingRowStyle" valign="top">
+			<td>&nbsp;</td><td>
+                                <a id="gv_detail_lbtn_class_nbr_1" href="javascript:__doPostBack(&#39;gv_detail$ctl03$lbtn_class_nbr&#39;,&#39;&#39;)"></a>
+                            </td><td style="width:500px;">
+                                <a id="gv_detail_lbtn_course_title_1" href="javascript:__doPostBack(&#39;gv_detail$ctl03$lbtn_course_title&#39;,&#39;&#39;)"></a>
+                            </td><td>&nbsp;</td><td style="width:500px;">
+                                <span id="gv_detail_lbl_teaching_staff_1"></span>
+                            </td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>We 09:30AM - 12:15PM</td><td>UCA_312</td><td>5/2, 12/2, 19/2, 26/2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr class="normalGridViewRowStyle" valign="top">
+			<td>&nbsp;</td><td>
+                                <a id="gv_detail_lbtn_class_nbr_2" href="javascript:__doPostBack(&#39;gv_detail$ctl04$lbtn_class_nbr&#39;,&#39;&#39;)"></a>
+                            </td><td style="width:500px;">
+                                <a id="gv_detail_lbtn_course_title_2" href="javascript:__doPostBack(&#39;gv_detail$ctl04$lbtn_course_title&#39;,&#39;&#39;)"></a>
+                            </td><td>&nbsp;</td><td style="width:500px;">
+                                <span id="gv_detail_lbl_teaching_staff_2"></span>
+                            </td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>We 09:30AM - 12:15PM</td><td>UCA_312</td><td>12/3, 19/3, 26/3, 2/4, 9/4, 16/4</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr>
+	</table>
+</div>
+            </div>
+        
+    <br /><br />
+
+    <input type="hidden" name="hf_Captcha" id="hf_Captcha" value="tt_638791338096946842" />
+    <input type="hidden" name="hf_previous_page" id="hf_previous_page" value="SEARCH" />
+    <input type="hidden" name="hf_course_id" id="hf_course_id" />
+    <input type="hidden" name="hf_course_offer_nbr" id="hf_course_offer_nbr" />
+    <input type="hidden" name="hf_class_nbr" id="hf_class_nbr" />
+    <input type="hidden" name="hf_max_search_iteration" id="hf_max_search_iteration" value="0" />
+    <input type="hidden" name="hf_search_iteration" id="hf_search_iteration" value="0" />
+    
+    </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+WebForm_AutoFocus('btn_search');//]]>
+</script>
+</form>
+</body>
+</html>
